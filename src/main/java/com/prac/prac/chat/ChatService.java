@@ -23,8 +23,6 @@ public class ChatService {
     }
 
     public List<ChatRoom> findAllRoom() {
-        //객체를 새로 만들어서 주는게 맞나??? 빈에는 필드 안하는게 좋아도 list객체를 그때그떄 만들어서 하는것보다 현재 상태로 갖고있는거 제공하는게 낫지않나?
-        //왜 굳이 Map 형태일까? List형태였으면 안됐나??
         return new ArrayList<>(chatRooms.values());
     }
 
@@ -41,8 +39,4 @@ public class ChatService {
         chatRooms.put(randomId, chatRoom);
         return chatRoom;
     }
-
-
-
-
 }

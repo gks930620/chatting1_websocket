@@ -9,8 +9,8 @@ import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry
 
 @RequiredArgsConstructor
 @Configuration
-@EnableWebSocket   //이게 websocket 서버로서 동작하겠다는 @
-public class WebSockConfig implements WebSocketConfigurer { //채팅구현은 2개. messageBroker랑 그냥 Configuer
+@EnableWebSocket   //이게 websocket 서버로서 동작하겠다는 어노테이션
+public class WebSockConfig implements WebSocketConfigurer {
     private final WebSocketHandler webSocketHandler;
 
     @Override

@@ -16,12 +16,10 @@
 
 <script th:inline="javascript">
         function enterRoom(socket){
-            var enterMsg={"type" : "ENTER","roomId":[[${room.roomId}]],"sender":"chee","msg":""};
+            var enterMsg={"type" : "ENTER","roomId":[[${room.roomId}]],"sender":"chee","msg":""}; //sender는  글쓸때 수정하자.
             socket.send(JSON.stringify(enterMsg));
         }
         let socket = new WebSocket("ws://localhost:8080/ws/chat");
-
-        //시작하자마자 메시지 보내야 함 type, roomid,sender,message 형태
 
         socket.onopen = function (e) {
             console.log('open server!')
